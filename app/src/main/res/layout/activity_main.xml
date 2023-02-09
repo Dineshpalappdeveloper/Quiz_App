@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBE6E6"
+    tools:context=".MainActivity"
+    tools:ignore="Orientation">
+
+    <LinearLayout
+        android:id="@+id/q1"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+
+                android:layout_marginTop="10dp"
+                android:src="@drawable/baseline_location_on_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/qustionCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/lora_semibold"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/lora_semibold"
+                    android:text="/25"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/lora_semibold"
+                android:text="You are from ?"
+                android:textColor="@color/black"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                tools:layout_editor_absoluteX="25dp" />
+
+            <LinearLayout
+                android:id="@+id/answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="8dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lora_semibold"
+                    android:padding="2dp"
+                    android:text="(a) Bihar"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:fontFamily="@font/lora_semibold"
+                    android:padding="2dp"
+                    android:text="(b) Mumbai"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lora_semibold"
+                    android:padding="2dp"
+                    android:text="(c) New Delhi"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:fontFamily="@font/lora_semibold"
+                    android:padding="2dp"
+                    android:text="(d) Other"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="19dp" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="50dp"
+                android:visibility="gone"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/answer" />
+
+            <LinearLayout
+                android:id="@+id/nextPriview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:weightSum="2"
+                android:visibility="visible"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar"
+                tools:layout_editor_absoluteX="25dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lora_semibold"
+                    android:text="Previous" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lora_semibold"
+                    android:text="Next" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/q2"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+
+                android:layout_marginTop="10dp"
+                android:src="@drawable/baseline_assured_workload_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="DuplicateIds" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/qustionCount2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/lora_semibold"
+                    android:text="2"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/lora_semibold"
+                    android:text="/25"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/lora_semibold"
+                android:text="What are doing ?"
+                android:textColor="@color/black"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                tools:layout_editor_absoluteX="25dp" />
+
+            <LinearLayout
+                android:id="@+id/answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="8dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lora_semibold"
+                    android:padding="2dp"
+                    android:text="(a) Eating"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:fontFamily="@font/lora_semibold"
+                    android:padding="2dp"
+                    android:text="(b) Sleeping"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lora_semibold"
+                    android:padding="2dp"
+                    android:text="(c) Walking"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:fontFamily="@font/lora_semibold"
+                    android:padding="2dp"
+                    android:text="(d) Other"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="19dp" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                android:layout_width="50dp"
+                android:visibility="gone"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/answer2" />
+
+            <LinearLayout
+                android:id="@+id/nextPriview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:weightSum="2"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar2"
+                tools:layout_editor_absoluteX="25dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lora_semibold"
+                    android:text="Previous" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lora_semibold"
+                    android:text="Next" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/q3"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView3"
+
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+
+                android:layout_marginTop="10dp"
+                android:src="@drawable/baseline_access_time_filled_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/qustionCount3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/lora_semibold"
+                    android:text="3"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/lora_semibold"
+                    android:text="/25"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/lora_semibold"
+                android:text="Your Favourite Color ?"
+                android:textColor="@color/black"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                tools:layout_editor_absoluteX="25dp" />
+
+            <LinearLayout
+                android:id="@+id/answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="8dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lora_semibold"
+                    android:padding="2dp"
+                    android:text="(a) Red"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:fontFamily="@font/lora_semibold"
+                    android:padding="2dp"
+                    android:text="(b) Black"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lora_semibold"
+                    android:padding="2dp"
+                    android:text="(c) Pink"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:fontFamily="@font/lora_semibold"
+                    android:padding="2dp"
+                    android:text="(d) Other"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="19dp" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar3"
+                android:layout_width="50dp"
+                android:visibility="gone"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/answer3" />
+
+            <LinearLayout
+                android:id="@+id/nextPriview3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:weightSum="2"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar3"
+                tools:layout_editor_absoluteX="25dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lora_semibold"
+                    android:text="Previous" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lora_semibold"
+                    android:text="Next" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
